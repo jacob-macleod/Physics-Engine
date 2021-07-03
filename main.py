@@ -2,22 +2,27 @@ from display import screen
 import time
 from maths import equations
 
-#x, y
-screen_size = [20, 10]
+########### VALUES ABLE TO BE CHANGED #######################
+#x, y                                                       #
+screen_size = [20, 10]                                      #   
+                                                            #    
+#Values for the object, mass is measured in kg              #    
+#Also, if the object moves by one, it moves by 1 meter      #
+mass = 4                                                    #
+#M/s                                                        #        
+starting_velocity = 0                                       #        
+#X, y - initial position of the object                      #    
+initial_position = [0, 5]                                   #
+                                                            #
+#Seconds/metre - 0.5 s/m = 2 ms                             #
+sm = 0.5                                                    #
+epochs = 60                                                 #            
+#############################################################
 
-#Values for the object, mass is measured in kg
-#Also, if the object moves by one, it moves by 1 meter
-mass = 4
-#M/s
-starting_velocity = 0
-#X, y
-initial_position = [0, 5]
 
-sm = 0.5
 final_pos = 0
 direction = "right"
 counter = 0
-epochs = 60
 ms = 0
 
 for i in range(0, epochs) :
@@ -27,7 +32,10 @@ for i in range(0, epochs) :
         time.sleep (sm)
     else :
         screen.draw_canvas(screen_size[0], screen_size[1], final_pos - counter, initial_position[1])
-        ms = ms + acceleration
+
+        #Uncomment the following line and comment the line after to allow the velocity to constantly increase over time
+        #ms = ms + acceleration
+        ms = acceleration
         print ("\nCurrent Velocity: " + str(ms) + " m/s")
         time.sleep (equations.convert_sm_and_ms(ms))
 
