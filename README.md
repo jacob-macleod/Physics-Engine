@@ -3,11 +3,13 @@ A python physics engine
   - [Description](#description)
   - [Features](#features)
 
-## Description- [Physics-Engine](#physics-engine)
+## Description
 This is a simple physics engine which runs entirely in the terminal, simulating the collision of an object with another stationary object.
 
 ## Usage
 To use this, simply clone the repo and run main.py with `python3 main.py`. You must have python already installed. For help with this, please see (this)[https://realpython.com/installing-python/] help guide.
+
+In addition, you can change any of the values within the box labelled, "CONFIG" in main.py to edit and tweak the program results. 
 
 ## Features
 This Engine simulates:

@@ -2,7 +2,7 @@ from display import screen
 import time
 from maths import equations
 
-########### VALUES ABLE TO BE CHANGED #######################
+########### CONFIG ##########################################
 #x, y                                                       #
 screen_size = [20, 10]                                      #   
                                                             #    
